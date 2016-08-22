@@ -6,7 +6,7 @@ import { camelize } from './../librarys/String';
 import { ScriptCache } from './../librarys/ScriptCache';
 import GoogleApi from './../librarys/GoogleApi';
 
-let step = 1;
+// let step = 1;
 
 const evtNames = [ 'ready', 'click', 'dragend', 'recenter' ];
 const defaultMapConfig = {}
@@ -40,8 +40,8 @@ class AppComponent extends React.Component {
 
     super(props, context);
 
-    console.log('AppComponent: #' + step + ' constructor()');
-    step++;
+    // console.log('AppComponent: #' + step + ' constructor()');
+    // step++;
 
     this.scriptCache = defaultCreateCache();
     this.scriptCache.google.onLoad(this.onLoad.bind(this));
@@ -68,19 +68,19 @@ class AppComponent extends React.Component {
   }
 
   componentWillMount() {
-    console.log('AppComponent: #' + step + ' componentWillMount()');
-    step++;
+    // console.log('AppComponent: #' + step + ' componentWillMount()');
+    // step++;
   }
 
   componentDidMount() {
-    console.log('AppComponent: #' + step + ' componentDidMount()');
-    step++;
+    // console.log('AppComponent: #' + step + ' componentDidMount()');
+    // step++;
   }
 
   onLoad(err, tag) {
 
-    console.log('AppComponent: #' + step + ' onLoad()');
-    step++;
+    // console.log('AppComponent: #' + step + ' onLoad()');
+    // step++;
 
     const refs = this.refs;
     const mapRef = refs.map;
@@ -114,14 +114,14 @@ class AppComponent extends React.Component {
       google: window.google
     });
 
-    console.log(this.state);
+    // console.log(this.state);
 
   }
 
   handleEvent(evtName) {
 
-    console.log('AppComponent: #' + step + ' handleEvent()');
-    step++;
+    // console.log('AppComponent: #' + step + ' handleEvent()');
+    // step++;
 
     let timeout;
     const handlerName = `on${camelize(evtName)}`
@@ -142,8 +142,8 @@ class AppComponent extends React.Component {
 
   render() {
 
-    console.log('AppComponent: #' + step + ' render()');
-    step++;
+    // console.log('AppComponent: #' + step + ' render()');
+    // step++;
 
     const style = Object.assign({}, mapStyles.map, this.props.style, {
         display: 'inherit'
