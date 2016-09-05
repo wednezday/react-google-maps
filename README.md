@@ -1,5 +1,5 @@
 # react-google-map
-React Application | Google Map
+React Application | Google Maps API v3.26
 
 # install
 - npm install webpack webpack-dev-server -g
